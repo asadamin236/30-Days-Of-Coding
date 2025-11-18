@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-black">
+      <h1 id="title" class="heading">DOM learning in Javascript</h1>
+      <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, animi.
+        Consectetur facere veniam sapiente earum praesentium accusantium,
+        excepturi tempora iste!
+      </p>
+    </div>
+    <ul>
+      <li class="list-item">One</li>
+      <li class="list-item">Two</li>
+      <li class="list-item">Three</li>
+    </ul>
+    <!-- childNodes -->
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+    </div>
+    <script>
+      let parent = document.querySelector(".parent");
+      console.log(parent);
+      console.log(parent.children);
+      console.log(parent.children[1].innerText);
+      // for (let index = 0; index < parent.children.length; index++) {
+      //   console.log(parent.children[index].innerText);
+      // }
+      parent.children[0].style.color = "red";
+      console.log(parent.firstElementChild.innerText);
+      console.log(parent.lastElementChild.innerText);
+      const dayOne = document.querySelector(".day")
+      console.log(dayOne.innerHTML);
+      dayOne.style.backgroundColor = "red"
+      dayOne.style.color = "black"
+      dayOne.style.fontWeight = "bold" 
+      // console.log(dayOne.parentElement);
+      console.log(dayOne.nextElementSibling);
+      console.log("Nodes: ", parent.childNodes);
+      
+    </script>
+  </body>
+</html>

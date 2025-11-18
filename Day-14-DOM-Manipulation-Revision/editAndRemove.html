@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Edit And Remove</title>
+</head>
+<body>
+  <ul class="language">
+    <li>Python</li>
+  </ul>
+</body>
+<script>
+  document.body.style.backgroundColor = "black"
+  document.body.style.color = "white"
+
+  function addLang(langName){
+    let language = document.createElement("li")
+    language.innerHTML = `${langName}`
+    document.querySelector(".language").appendChild(language).appendChild
+  }
+  addLang("Javacript")
+  addLang("TypeScript")
+</script>
+</html>
